@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        span{
+            position: absolute;
+            top:470px;
+            left:100px;
+            width:40px;
+            height:40px;
+            background-color: #0dff1d;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<button>点我</button>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<span></span>
+<script type="text/javascript" src="fly/jquery.js"></script>
+<script type="text/javascript" src="fly/jquery.fly.min.js"></script>
+<script>
+    $(function(){
+        $('button').click(function(){
+           /*$('span').css({
+              background:'#f0f'
+           });*/
+            $('span').fly({
+                start: {
+                    left:100 , //抛物体起点横坐标
+                    top: 470////抛物体起点纵坐标
+                },
+                end: {
+                    left:550, //抛物体终点横坐标
+                    top: 300 //抛物体终点纵坐标
+                },
+                onEnd: function() {
+//                    $("#tip").show().animate({width: '200px'}, 300).fadeOut(500);//成功加入购物车动画效果
+                    this.destory();//销毁抛物体
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
