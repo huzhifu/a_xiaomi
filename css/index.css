@@ -66,12 +66,16 @@ header{
             margin-top: 22px;
             float:left;
         }
+        #h_container>img:last-of-type{
+            margin-left:20px;
+            width:130px;
+        }
         #h_container>ul{
             width: 660px;
             height: 16px;
             float:left;
             list-style: none;
-            margin:42px 0 0 160px;
+            margin:42px 0 0 65px;
         }
             #h_container>ul li{
                 float:left;
